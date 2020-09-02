@@ -1,0 +1,5 @@
+2020-09-01 14:44:02.964  INFO 14324 --- [restartedMain] com.hui.blog.BlogApplication             : Starting BlogApplication on DESKTOP-CI6STVK with PID 14324 (E:\IDEA Project\SpringDataJPA\blog\target\classes started by Dell in E:\IDEA Project\SpringDataJPA\blog)
+2020-09-01 14:44:02.970  INFO 14324 --- [restartedMain] com.hui.blog.BlogApplication             : The following profiles are active: pro
+2020-09-01 14:44:04.767  WARN 14324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-01 14:44:05.043  WARN 14324 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-09-01 14:44:05.206  INFO 14324 --- [restartedMain] com.hui.blog.BlogApplication             : Started BlogApplication in 2.902 seconds (JVM running for 4.163)

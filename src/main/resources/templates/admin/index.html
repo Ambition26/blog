@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_admin_fragments :: head(~{::title})">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>管理首页</title>
+    <link rel="stylesheet" type="text/css" href="../../static/js/Semantic-UI/semantic.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/me.css"/>
+</head>
+<body>
+<!-- 导航 -->
+<nav th:replace="admin/_admin_fragments :: menu(0)"></nav>
+
+<!-- 中间内容 -->
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui success large message ">
+            <h2>Hi,</h2>
+            <p><span th:text="${session.user.nickname}"></span>，欢迎你啊</p>
+        </div>
+        <img src="https://picsum.photos/1000/1000" class="ui rounded bordered fluid image">
+    </div>
+</div>
+
+<!-- 底部footer -->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive"></footer>
+
+<script src="../static/js/Jquery/jquery.min.js" type="text/javascript" charset="utf-8"
+        th:src="@{/js/Jquery/jquery.min.js}"></script>
+<script src="../static/js/Semantic-UI/semantic.min.js" type="text/javascript" charset="utf-8"
+        th:src="@{/js/Semantic-UI/semantic.min.js}"></script>
+<script src="../static/lib/prism/prism.js" type="text/javascript" charset="utf-8"
+        th:src="@{/lib/prism/prism.js}"></script>
+<script src="../static/lib/tocbot/tocbot.min.js" type="text/javascript" charset="utf-8"
+        th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"
+        th:src="@{//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js}"></script>
+<script src="../static/lib/qrcode/qrcode.min.js" type="text/javascript" charset="utf-8"
+        th:src="@{/lib/qrcode/qrcode.min.js}"></script>
+<script src="../static/lib/waypoint/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"
+        th:src="@{/lib/waypoint/jquery.waypoints.min.js}"></script>
+<script type="text/javascript">
+    $(".menu.toggle").click(function () {
+        $(".m-item ").toggleClass('m-mobile-hide');
+    });
+    $(".ui.dropdown").dropdown({
+        on: 'hover'
+    });
+</script>
+</body>
+</html>
