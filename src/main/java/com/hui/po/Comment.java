@@ -33,6 +33,16 @@ public class Comment {
     @ManyToOne
     private Comment parentComment;
 
+    private Boolean adminComment;
+
+    public Boolean getAdminComment() {
+        return adminComment;
+    }
+
+    public void setAdminComment(Boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
     public List<Comment> getReplyComments() {
         return replyComments;
     }

@@ -19,16 +19,21 @@
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui  teal header item">Blog</h2>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1}? 'active' "><i class=" home icon"></i>首页</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2}? 'active' "><i class=" idea icon"></i>分类</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3}? 'active' "><i class=" tags icon"></i>标签</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4}? 'active' "><i
+            <a href="#" th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1}? 'active' "><i
+                    class=" home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2}? 'active' "><i
+                    class=" idea icon"></i>分类</a>
+            <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3}? 'active' "><i
+                    class=" tags icon"></i>标签</a>
+            <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4}? 'active' "><i
                     class=" clone icon"></i>归档</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5}? 'active' "><i class=" info icon"></i>关于我</a>
+            <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5}? 'active' "><i
+                    class=" info icon"></i>关于我</a>
             <div class="m-item right item  m-mobile-hide">
                 <form method="post" name="search" class="ui form" th:action="@{/search}" target="_blank">
                     <div class="ui icon inverted transparent input m-margin-tb-tiny">
-                        <input th:value="${query}" type="text" name="query" placeholder="Search...." style="color: white"/>
+                        <input th:value="${query}" type="text" name="query" placeholder="Search...."
+                               style="color: white"/>
                         <i onclick="document.forms['search'].submit()" class="search link icon"></i>
                     </div>
                 </form>
@@ -39,7 +44,6 @@
         <i class="sidebar icon"></i>
     </a>
 </nav>
-
 
 <!-- 底部footer -->
 <footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
